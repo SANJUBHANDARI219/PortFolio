@@ -22,6 +22,13 @@ body, html {
     color: var(--white);
     min-height: 100dvh;
     overflow-x: hidden;
+    transition: all 03s ease;
+}
+
+body.no-scroll {
+    height: 100dvh;
+    overflow: hidden;
+
 }
 
 /* include style in main container */
@@ -29,7 +36,6 @@ body, html {
     max-width: 700px;
     padding: 1rem; /* 1rem --> 600px */
     margin: 0 auto;
-    border: 2px solid red;
 }
 
 header {
@@ -74,6 +80,17 @@ header {
     z-index: 1000;
 }
 
+#menu-toggle:checked ~ #overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    top: 7rem;
+    height: 100dvh;
+    background: var(--primary);
+    opacity: 1;
+    pointer-events: none;
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -83,6 +100,8 @@ nav {
     right: 0;z-index: 1000;
     margin: 2rem 0;
     transform: translateX(150%);
+    transition: all 0.4s ease;
+
 }
 
 #menu-toggle:checked ~ nav {
@@ -99,12 +118,85 @@ nav a {
     color: var(--white);
     opacity: 0;
     transform: translateX(150%);
+    transition: all 0.4s ease;
 }
 
 #menu-toggle:checked ~ nav a {
     opacity: 1;
     transform: translateX(0%);
+    transition-delay: calc(var(--i) * 0.2s);
 }
 
-/* https://youtu.be/9EM0XLN7cwc */
-/* 45:41 */
+@media screen and (width >= 1024px) {
+    .main-container {
+        max-width: 950px;
+    }
+
+    header {
+        position: static;
+    }
+
+    .brand-info {
+        gap: 20px;
+    }
+
+    .brand-info img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .brand-info h2 {
+        font-size: 2.5rem;
+    }
+
+    #menu-toggle {
+        pointer-events: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        position: static;
+        transform: translateX(0%);
+    }
+
+    nav a {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        border: none;
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    nav a:hover {
+        color: var(--lightBlue)
+    }
+}
+
+@media screen and (width >= 1250px) {
+    .main-container {
+        max-width: 1200px;
+    }
+
+    .brand-info {
+        gap: 35px;
+    }
+
+    .brand-info img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .brand-info h2 {
+        font-size: 3rem;
+    }
+
+    nav {
+        gap: 2rem;
+    }
+}
