@@ -48,3 +48,30 @@ const type = () => {
 document.addEventListener('DOMContentLoaded', ()=> {
     if (words?.length) type();
 });
+
+const navelinks = document.querySelectorAll(".navlink");
+const tabs = document.querySelectorAll(".content");
+
+navelinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        navelinks.forEach((l) => {
+            if(l === link) {
+                l.classList.add("active");
+            } else {
+                l.classList.remove("active");
+            }
+        });
+
+        const tabName = link.dataset.tab;
+
+        tabs.forEach((tab) => {
+            if(tab.id === tabName) {
+                tab.classList.add("active");
+            } else {
+                tab.classList.remove("active");
+            }
+        })
+    })
+});

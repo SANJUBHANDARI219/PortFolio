@@ -127,6 +127,18 @@ nav a {
     transition-delay: calc(var(--i) * 0.2s);
 }
 
+.navlink.active {
+    color: var(--lightBlue);
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
 @media screen and (width >= 1024px) {
     .main-container {
         max-width: 950px;

@@ -31,17 +31,17 @@
 
                     <!-- navigation bar -->
                     <nav>
-                        <a href="#" style="--i:1">Home</a>
-                        <a href="#" style="--i:2">About</a>
-                        <a href="#" style="--i:3">Services</a>
-                        <a href="#" style="--i:4">Project</a>
-                        <a href="#" style="--i:5">Contact</a>
+                        <a href="#" style="--i:1" data-tab="home" class="navlink active">Home</a>
+                        <a href="#" style="--i:2" data-tab="about" class="navlink">About</a>
+                        <a href="#" style="--i:3" data-tab="services" class="navlink">Services</a>
+                        <a href="#" style="--i:4" data-tab="projects" class="navlink">Projects</a>
+                        <a href="#" style="--i:5" data-tab="contact" class="navlink">Contact</a>
                     </nav>
                 </div>
             </header>
 
-            <!-- main body -->
-            <section class="home">
+            <!-- main home body -->
+            <section id="home" class="content active">
                 <!-- left side container -->
                 <div class="details">
                     <h2>
@@ -57,12 +57,17 @@
                     <!-- some info. -->
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, dolor? Eligendi quos vel veniam nobis facere aut praesentium, consectetur non, beatae repellat tenetur tempora officiis accusamus. Laboriosam architecto voluptates quis.</p>
 
-                    <!-- icons -->
+                    <div class="bottom">
+                        <!-- cv downlode button -->
+                        <button>Download CV</button>
+
+                        <!-- icons -->
                     <div class="social-icons">
                         <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-square-github"></i></a>
                         <a href="#"><i class="fa-brands fa-square-linkedin"></i></a>
+                    </div>
                     </div>
                 </div>
 
@@ -71,6 +76,17 @@
                     <img src="profile.jpg" alt="Profile Picture" title="Profile Picture" loading="lazy" />
                 </div>
             </section>
+
+            <!-- main about body -->
+            <section id="about" class="content">About</section>
+
+            <!-- main project body -->
+
+            <section id="projects" class="content">Projects</section>
+
+            <!-- main contact body -->
+
+            <section id="contact" class="content">Contact</section>
         </div>
 
         <!-- input javascript -->
