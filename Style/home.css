@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
     width: 90%;
     max-width: 700px;
     margin: 2rem auto;
@@ -120,10 +120,10 @@
 .bottom {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
-.bottom button {
+.btn {
     width: 12rem;
     padding: 0.8rem 0;
     font-size: 1.3rem;
@@ -135,21 +135,26 @@
     transition: all ease 0.3s;
 }
 
-.bottom button:hover {
+.btn:hover {
     box-shadow: 3px 3px 3px var(--lightBlue), -3px 3px 3px var(--lightBlue), 3px -3px 3px var(--lightBlue), -3px -3px 3px var(--lightBlue);
+    background: transparent;
+    border: 2px solid var(--lightBlue);
+    color: var(--white);
 }
 
 .social-icons {
     display: flex;
+    align-items: center;
     gap: 20px;
-    font-size: 2.5rem;
 }
 
 .social-icons a {
-    color: var(--white);
+    text-decoration: none;
+    color: var(--lightBlue);
+    border: 2px solid var(--lightBlue);
+    width: 45px;
+    height: 45px;
     transition: all ease 0.3s;
-    width: 50px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,11 +163,13 @@
 }
 
 .social-icons a i{
-    font-size: 3.6rem;
+    font-size: 1.5rem;
 }
 
 .social-icons a:hover {
-    color: var(--lightBlue);
+    background: var(--lightBlue);
+    color: var(--primary);
+    box-shadow: 2px 2px 2px var(--lightBlue), -2px 2px 2px var(--lightBlue), 2px -2px 2px var(--lightBlue), -2px -2px 2px var(--lightBlue);
     scale: 105%;
 }
 
@@ -190,13 +197,12 @@
     }
 
     .bottom {
-        display: flex;
         flex-direction: row;
         align-items: center;
         gap: 20px;
     }
 
-    .bottom button {
+    .btn {
         border-radius: 50px;
     }
 }

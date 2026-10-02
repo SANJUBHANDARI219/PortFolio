@@ -3,19 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PortFolio</title>
+        <title>PortFolio Website | HTML, CSS, JvaScript, Phorphor Icons.</title>
         <!-- include css -->
-        <link rel="stylesheet" href="head.css">
-        <link rel="stylesheet" href="home.css">
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-        <script src="https://kit.fontawesome.com/68518b3752.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="Style/head.css">
+        <link rel="stylesheet" href="Style/home.css">
+        <link rel="stylesheet" href="Style/services.css">
+        <link rel="shortcut icon" href="logo.png" type="image/x-icon"> 
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
     </head>
     <body>
         <div class="main-container">
+            <!-- home section header -->
             <header>
                 <!-- left side brand name show -->
                 <div class="brand-info">
-                    <img src="logo.png" alt="">
+                    <img src="logo.png" alt="Logo" title="Logo" loading="lazy">
                     <h2>Portfolio</h2>
                 </div>
 
@@ -24,7 +27,7 @@
                     <input type="checkbox" name="" id="menu-toggle" hidden />
 
                     <!-- when open -->
-                    <label for="menu-toggle" class="menu-icon"><i class="bx bx-menu"></i></label>
+                    <label for="menu-toggle" class="menu-icon"><i class="ph ph-list"></i></label>
 
                     <!-- when close -->
                     <label for="menu-toggle" id="overlay"></label>
@@ -32,8 +35,8 @@
                     <!-- navigation bar -->
                     <nav>
                         <a href="#" style="--i:1" data-tab="home" class="navlink active">Home</a>
-                        <a href="#" style="--i:2" data-tab="about" class="navlink">About</a>
-                        <a href="#" style="--i:3" data-tab="services" class="navlink">Services</a>
+                        <a href="#" style="--i:2" data-tab="services" class="navlink">Services</a>
+                        <a href="#" style="--i:3" data-tab="about" class="navlink">About</a>
                         <a href="#" style="--i:4" data-tab="projects" class="navlink">Projects</a>
                         <a href="#" style="--i:5" data-tab="contact" class="navlink">Contact</a>
                     </nav>
@@ -59,14 +62,14 @@
 
                     <div class="bottom">
                         <!-- cv downlode button -->
-                        <button>Download CV</button>
+                        <button class="btn">Download CV</button>
 
                         <!-- icons -->
                     <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-square-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-square-linkedin"></i></a>
+                        <a href="#"><i class="ph ph-facebook-logo" title="Facebook"></i></a>
+                        <a href="#"><i class="ph ph-instagram-logo" title="Instagram"></i></a>
+                        <a href="#"><i class="ph ph-github-logo" title="GitHub"></i></a>
+                        <a href="#"><i class="ph ph-linkedin-logo" title="LinkedIn"></i></a>
                     </div>
                     </div>
                 </div>
@@ -77,19 +80,23 @@
                 </div>
             </section>
 
+            <!-- main services body -->
+            <section id="services" class="content">
+                <h2>My <span>Services</span></h2>
+                <div class="services-list"></div>
+            </section>
+
             <!-- main about body -->
             <section id="about" class="content">About</section>
 
             <!-- main project body -->
-
             <section id="projects" class="content">Projects</section>
 
             <!-- main contact body -->
-
             <section id="contact" class="content">Contact</section>
         </div>
 
         <!-- input javascript -->
-        <script src="script.js" defer></script>
+        <script src="script.js" type="module" defer></script>
     </body>
 </html>

@@ -72,6 +72,38 @@ navelinks.forEach((link) => {
             } else {
                 tab.classList.remove("active");
             }
-        })
-    })
+        });
+
+        // service section-->
+        if(tabName === "services") {
+            const serviceList = [{
+                id: 1,
+                icon: "",
+                text: "Website Development",
+                para: "I create modern, high-performance websites and web applications tailored to your business needs. From clean, responsive front-end interfaces using HTML5, CSS, and React.js to robust back-end systems built with Node.js, Python, and Java, I deliver seamless, end-to-end digital experiences optimized for speed, functionality, and user engagement.",
+            }, {
+                id: 2,
+                icon: "",
+                text: "UX/UI Design",
+                para: "I design intuitive, visually striking mobile interfaces for both Android and iOS that deliver smooth, native-like user experiences. Leveraging my expertise in React Native and Expo, I bridge the gap between design and development—creating clean layouts, responsive UI components, and seamless user journeys that look great on any screen size.",
+            }, {
+                id: 3,
+                icon: "",
+                text: "SEO Optimization",
+                para: "I optimize websites to boost search engine visibility, drive targeted organic traffic, and improve rankings. By refining site structure, strategically targeting key keywords, and fine-tuning technical performance for lightning-fast speed, I ensure your platform stands out to both search engines and potential clients.",
+            }];
+
+            const services = document.getElementsByClassName("service-list");
+
+            const innerContent = serviceList.map(()=> {
+                return `
+                <div>Inner Box</div>
+                `;
+            });
+
+            Array.from(services).forEach((ele)=> {
+                ele.innerHTML = innerContent;
+            });
+        }
+    });
 });
